@@ -59,8 +59,8 @@ Integrate the compiled executable file into the Widget directory (com.avermedia.
 * [MacOS] Place the Widget directory to "~/Applications Support/AVerMedia Creator Central/widgets/＜PackageName＞/", then open the Creator Central machine to see it.
 
 # **Uninstallation**
-* [WinOS] Close Creator Central, and go to "C:/Users/＜YourName＞/AppData/Roaming/AVerMedia Creator Central/widgets/＜PackageName＞/", delete the com.avermedia.widget.js.clock folder, and then open Creator Central again.
-* [MacOS] Close Creator Central, and go to "~/Applications Support/AVerMedia Creator Central/widgets/＜PackageName＞/", delete the com.avermedia.widget.js.clock folder, and then open Creator Central again.
+* [WinOS] Close Creator Central, and go to "C:/Users/＜YourName＞/AppData/Roaming/AVerMedia Creator Central/widgets/＜PackageName＞/", delete the Clock_js.widget folder, and then open Creator Central again.
+* [MacOS] Close Creator Central, and go to "~/Applications Support/AVerMedia Creator Central/widgets/＜PackageName＞/", delete the Clock_js.widget folder, and then open Creator Central again.
 
 # **Troubleshooting for running failure**
 * [WinOS]
@@ -121,8 +121,8 @@ Integrate the compiled executable file into the Widget directory (com.avermedia.
 * [MacOS] 將 Widget 目錄放置到 "~/Applications Support/AVerMedia Creator Central/widgets/＜PackageName＞/" ，接著打開 Creator Central 機器即可看到。
 
 # **反安裝**
-* [WinOS] 關掉 Creator Central ，到 "C:/Users/＜YourName＞/AppData/Roaming/AVerMedia Creator Central/widgets/＜PackageName＞/" 目錄下把 com.avermedia.widget.js.clock 資料夾刪掉，再次打開 Creator Central 即可。
-* [MacOS] 關掉 Creator Central ，到 "~/Applications Support/AVerMedia Creator Central/widgets/＜PackageName＞/" 目錄下把 com.avermedia.widget.js.clock 資料夾刪掉，再次打開 Creator Central 即可。
+* [WinOS] 關掉 Creator Central ，到 "C:/Users/＜YourName＞/AppData/Roaming/AVerMedia Creator Central/widgets/＜PackageName＞/" 目錄下把 Clock_js.widget 資料夾刪掉，再次打開 Creator Central 即可。
+* [MacOS] 關掉 Creator Central ，到 "~/Applications Support/AVerMedia Creator Central/widgets/＜PackageName＞/" 目錄下把 Clock_js.widget 資料夾刪掉，再次打開 Creator Central 即可。
 
 # **無法執行時的問題排除措施說明**
 * [WinOS]
