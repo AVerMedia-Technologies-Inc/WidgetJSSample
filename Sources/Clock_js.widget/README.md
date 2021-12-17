@@ -116,7 +116,7 @@ Integrate the compiled executable file into the Widget directory (Clock_js.widge
 注意：Creator Central 只支援 String 資料型別. 如果發送 Data 資料型別的封包的話， Creator Central 將不會有任何動作。
 
 # **安裝**
-將編譯後執行檔整合進 Widget 目錄 （com.avermedia.widget.js.clock/)
+將編譯後執行檔整合進 Widget 目錄 （Clock_js.widget/)
 * [WinOS] 將 Widget 目錄放置到 "C:/Users/＜YourName＞/AppData/Roaming/AVerMedia Creator Central/widgets/＜PackageName＞/" ，接著打開 Creator Central 機器即可看到。
 * [MacOS] 將 Widget 目錄放置到 "~/Applications Support/AVerMedia Creator Central/widgets/＜PackageName＞/" ，接著打開 Creator Central 機器即可看到。
 
