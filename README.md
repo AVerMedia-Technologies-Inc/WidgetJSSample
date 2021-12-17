@@ -54,7 +54,7 @@ You can see a list of all time zones at this URL [https://en.wikipedia.org/wiki/
 Note: Creator Central only supports String data type. If a Data type packet is sent, Creator Central will not take any action.
 
 # **Installation**
-Integrate the compiled executable file into the Widget directory (com.avermedia.widget.js.clock/)
+Integrate the compiled executable file into the Widget directory (Clock_js.widget/)
 * [WinOS] Place the Widget directory to "C:/Users/＜YourName＞/AppData/Roaming/AVerMedia Creator Central/widgets/＜PackageName＞/", then open the Creator Central machine to see it.
 * [MacOS] Place the Widget directory to "~/Applications Support/AVerMedia Creator Central/widgets/＜PackageName＞/", then open the Creator Central machine to see it.
 
