@@ -45,11 +45,11 @@ You can see a list of all time zones at this URL [https://en.wikipedia.org/wiki/
 # **Application File Description**
 |  File Name  |  Content Description  |
 |  ----  | ----  |
-| [common_widget.js](https://github.com/AVerMedia-Technologies-Inc/AxWidgetJsSample/blob/main/Sources/Clock_js.widget/property/js/common_widget.js)  | WebSocket for widgets, including objects, connecting, disconnecting, sending data, receiving data, etc., manages the entire process |
-| [common_property.js](https://github.com/AVerMedia-Technologies-Inc/AxWidgetJsSample/blob/main/Sources/Clock_js.widget/property/js/common_property.js)  | WebSocket for property, including objects, connection, disconnection, sending data, receiving data, etc., manages the entire process |
-| [widget.js](https://github.com/AVerMedia-Technologies-Inc/AxWidgetJsSample/blob/main/Sources/Clock_js.widget/widget.js)  | Draw digital and analog clocks, and convert images to base64 strings |
-| [property_main.js](https://github.com/AVerMedia-Technologies-Inc/AxWidgetJsSample/blob/main/Sources/Clock_js.widget/property/js/property_main.js)  | Get the option of the drop-down menu and pass the value to widget.js for drawing |
-| [localization.js](https://github.com/AVerMedia-Technologies-Inc/AxWidgetJsSample/blob/main/Sources/Clock_js.widget/property/js/localization.js)  | Multi-language setting |
+| [common_widget.js](https://github.com/AVerMedia-Technologies-Inc/WidgetJSSample/blob/main/Sources/Clock_js.widget/property/js/common_widget.js)  | WebSocket for widgets, including objects, connecting, disconnecting, sending data, receiving data, etc., manages the entire process |
+| [common_property.js](https://github.com/AVerMedia-Technologies-Inc/WidgetJSSample/blob/main/Sources/Clock_js.widget/property/js/common_property.js)  | WebSocket for property, including objects, connection, disconnection, sending data, receiving data, etc., manages the entire process |
+| [widget.js](https://github.com/AVerMedia-Technologies-Inc/WidgetJsSample/blob/main/Sources/Clock_js.widget/widget.js)  | Draw digital and analog clocks, and convert images to base64 strings |
+| [property_main.js](https://github.com/AVerMedia-Technologies-Inc/WidgetJSSample/blob/main/Sources/Clock_js.widget/property/js/property_main.js)  | Get the option of the drop-down menu and pass the value to widget.js for drawing |
+| [localization.js](https://github.com/AVerMedia-Technologies-Inc/WidgetJSSample/blob/main/Sources/Clock_js.widget/property/js/localization.js)  | Multi-language setting |
 
 Note: Creator Central only supports String data type. If a Data type packet is sent, Creator Central will not take any action.
 
