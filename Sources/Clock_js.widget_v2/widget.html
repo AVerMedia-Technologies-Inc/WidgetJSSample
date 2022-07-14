@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head style="margin: 0;padding: 0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock(JS) Widget</title>
+    <script src="js/ax_websocket.js"></script>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body style="margin: 0; padding: 0; background: #202020;">
+    <canvas id="canvas_clock" width=150 height=108></canvas>
+    <script src="js/main_widget.js"></script>
+    <script>
+        function debugDrawClock() {
+            //drawClock('analog');
+            drawClock('digital');
+        }
+        let widgetTimer = 0;
+        $(document).ready(function(){
+            debugDrawClock();
+            clearInterval(widgetTimer);
+            widgetTimer = setInterval(debugDrawClock, 1000);
+        });
+    </script>
+</body>
+</html>

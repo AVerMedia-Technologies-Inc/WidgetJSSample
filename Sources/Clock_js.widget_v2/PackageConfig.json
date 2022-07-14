@@ -1,0 +1,41 @@
+{
+    "Author": "AVerMedia",
+    "Description": "Widget Clock (JS)",
+    "Name": "Clock(JS)",
+    "UUID": "com.avermedia.widget.js",
+    "Icon": "images/clock.svg",
+    "URL": "https://www.avermedia.com/gaming/creatorcentral",
+    "Version": "1.0",
+    "Runtime": {
+        "mac": {
+            "type": "web",
+            "target": "widget.html",
+            "MinimumVersion": "11.0"
+        },
+        "win": {
+            "type": "web",
+            "target": "widget.html",
+            "MinimumVersion": "11.0"
+        }
+    },
+    "CreatorCentral": {
+        "MinimumVersion": "1.2",
+        "SDKVersion": 2
+    },
+    "Widgets": [
+        {
+            "Name": "Clock(JS)",
+            "Icon": "images/clock.svg",
+            "Tooltip": "Widget Clock (JS)",
+            "UUID": "com.avermedia.widget.js.clock2",
+            "PropertyViewPath": "property.html",
+            "States": [
+                {
+                    "Image": "images/clock.svg",
+                    "Title": "Clock(JS)"
+                }
+            ]
+        }
+    ]
+}
+

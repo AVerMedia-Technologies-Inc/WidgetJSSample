@@ -11,6 +11,12 @@
   --avt-input-font-size : 11px;
   --avt-item-width: 100%;
   --avt-option-width: 341px;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */  
 }
 
 html {
@@ -77,17 +83,21 @@ hr, hr2 {
   margin-right:16px;
 }
 
-.avt-item-value,
+
 option,
 input,
-select,
 button {
   padding: 6px 10px;
   font-size: var(--avt-input-font-size);
   font-weight: var(--avt-fontweight);
   letter-spacing: var(--avt-letterspacing);
 }
-
+.avt-item-value,select{
+  padding: 6px 25px 6px 10px;
+  font-size: var(--avt-input-font-size);
+  font-weight: var(--avt-fontweight);
+  letter-spacing: var(--avt-letterspacing);
+}
 
 ::-webkit-progress-value,
 meter::-webkit-meter-optimum-value {
@@ -265,8 +275,8 @@ label.avt-file-label,
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
-input[type="file"],
-input[type=file]::-webkit-file-upload-button,
+/* input[type="file"],
+input[type=file]::-webkit-file-upload-button, */
 button {
   border: 1pt solid var(--avt-buttonbordercolor);
   border-radius: var(--avt-borderradius);
@@ -284,7 +294,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 input[type="file"] {
   border-radius: var(--avt-borderradius);
-  max-width: 220px;
+  max-width: 344px;
 }
 
 option {
@@ -350,12 +360,16 @@ table > caption {
   align-items: baseline;
 }
 
-.avt-item-label {
+.avt-item-label, .avt-first-item-label {
   color: #A1A1A1;
   width: var(--avt-item-width);
   padding: 2px;
   font-weight: 600;
   -webkit-user-select: none;
+}
+
+.avt-item-label {
+  margin-top: 8px;
 }
 
 .win .avt-item-label,
@@ -467,7 +481,7 @@ summary:focus,
   outline: none;
 }
 
-input:not([type="range"]),
+input:not([type="range"]),input:not([type="radio"])
 textarea {
   -webkit-appearance: none;
   background: var(--avt-background);
@@ -526,3 +540,146 @@ select option:disabled {
 }
 
 
+/* input radio */
+input[type='radio'] {
+	-webkit-appearance: none;
+	width: 15px;
+	height: 15px;
+	border: 1px solid var(--avt-background);
+	border-radius: 100%;
+	outline: none;
+	background: var(--avt-background);
+  padding: 0;
+  margin-right: 10px;
+}
+input[type='radio']:hover {
+	border: 1px solid var(--avt-background);
+}
+input[type='radio']:before {
+	content:'';
+	display: block;
+	width: 50%;
+	height: 50%;
+	margin: 25% auto;    
+	border-radius: 100%;    
+	background: var(--avt-background);
+}
+input[type='radio']:checked:before {
+	background: #FF9900;
+}
+input[type='radio']:disabled:checked:before {
+	background: #707070;
+}
+input[type='radio']:checked {
+	background: var(--avt-background);
+	border: 1px solid var(--avt-background);
+}
+input[type='radio']:checked:hover {
+	background: var(--avt-background);
+	border: 1px solid var(--avt-background);
+}
+.radio_wrap{
+	display: flex;
+  padding: 0;
+  margin-bottom: 10px;
+}
+/* .avt-item-value:nth-child(1){
+  margin-right: 38px;
+} */
+.radio_wrap > label{
+	display: flex;
+	align-items: center;
+  padding: 0;
+}
+
+#hr_collection,#min_collection,#am_pm_collection{
+  width: 64px;
+  margin: 0;
+}
+.set-time{ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 252px;
+}
+
+input[type="file"]{
+  height: 40px;
+}
+.ring_wrap{
+  display: flex;
+  justify-content: space-between;
+  width: 410px;
+}
+.ring_wrap > select{
+  width: 84%;
+}
+.ring_wrap > img{
+  width: 24px;
+  height: 24px;
+}
+.output_wrap{
+  display: flex;
+  width: 410px;
+}
+.output_wrap > select{
+  width: 84%;
+}
+.output_wrap > img{
+  margin-left: 10px ;
+  width: 24px;
+  height: 24px;
+}
+
+.head_img{
+  text-align: center;
+}
+#file-uploader{
+  display: none;
+}
+#hr_collection,#min_collection,#am_pm__collection{
+  width: 64px;
+}
+
+#add_img,
+#refresh{
+  border-radius: 3px;
+  background-color: #1E1E1E;
+}
+
+#add_img:hover{
+	background-color: #323232;
+}
+
+#refresh:hover{
+	background-color: #323232;
+}
+
+#add_img:active:hover{
+	background-color: #191919;
+}
+#refresh:active:hover{
+	background-color: #191919;
+}
+
+.visible{
+  border-radius: 3px;
+  background-color: #1E1E1E;
+}
+.visible:hover{
+	background-color: #323232;
+}
+.visible:active:hover{
+	background-color: #191919;
+}
+
+.disable{
+  border-radius: 3px;
+  background-color: #1E1E1E;
+  opacity: 0.5;
+}
+
+@font-face {
+  font-family: 'DotGothic16-Regular';
+  src: url('property/fonts/DotGothic16-Regular.ttf');
+}
