@@ -2,7 +2,7 @@
     "Author": "AVerMedia",
     "Description": "Widget Clock (JS)",
     "Name": "Clock(JS)",
-    "UUID": "com.avermedia.widget.js",
+    "UUID": "com.avermedia.widget.js-clock",
     "Icon": "images/clock.svg",
     "URL": "https://www.avermedia.com/gaming/creatorcentral",
     "Version": "1.0",
@@ -27,7 +27,7 @@
             "Name": "Clock(JS)",
             "Icon": "images/clock.svg",
             "Tooltip": "Widget Clock (JS)",
-            "UUID": "com.avermedia.widget.js.clock2",
+            "UUID": "com.avermedia.widget.js-clock.clock",
             "PropertyViewPath": "property.html",
             "States": [
                 {

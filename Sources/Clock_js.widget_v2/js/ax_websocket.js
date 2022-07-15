@@ -6,13 +6,9 @@
  */
 
 window.AVT_CREATOR_CENTRAL;
-window.REQUEST_SEQ_ID = 0;
 
-WebSocket.prototype.sendJSON = function(jsn, log) {
-    if (log) {
-        console.log('SendJSON', this, jsn);
-    }
-    this.send(JSON.stringify(jsn));
+WebSocket.prototype.sendJSON = function(json) {
+    this.send(JSON.stringify(json));
 };
 
 class EventEmitter {
@@ -52,8 +48,6 @@ class EventEmitter {
 };
 
 const AVT_CREATOR_CENTRAL_API_V2 = {
-    queue : {},
-
     send: function (apiType, payload, widget, uuid) {
         let context = uuid != null ? uuid: AVT_CREATOR_CENTRAL.uuid;
         let pl = {
@@ -110,8 +104,6 @@ AVT_CREATOR_CENTRAL = (function() {
                     event : inMessageType,
                     uuid: inUUID
                 };
-                
-                AVT_CREATOR_CENTRAL_API_V2.queue[REQUEST_SEQ_ID] = inMessageType + '.result';
                 websocket.sendJSON(json);
                 
                 AVT_CREATOR_CENTRAL.uuid = inUUID;
@@ -126,7 +118,7 @@ AVT_CREATOR_CENTRAL = (function() {
             };
 
             websocket.onerror = function(evt) {
-                console.warn('WEBOCKET ERROR', evt, evt.data);
+                console.warn('WEBSOCKET ERROR', evt, evt.data);
             };
 
             websocket.onclose = function(evt) {

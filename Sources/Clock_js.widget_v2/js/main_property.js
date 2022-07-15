@@ -6,6 +6,9 @@
  *
  * Include this script AFTER ax_property.js
  */
+
+const setWidgetSettings = AVT_CREATOR_CENTRAL_API_V2.setWidgetSettings;
+
 let widgetUuid = "";
 let widgetName = "";
 
@@ -19,7 +22,7 @@ AVT_CREATOR_CENTRAL.on('webSocketConnected', data => {
 
     widgetUuid = widgetInfo["context"];
     widgetName = widgetInfo["widget"];
-}
+});
 
 /**
  * Event received after sending the getWidgetSettings event to retrieve
@@ -30,7 +33,7 @@ AVT_CREATOR_CENTRAL.on('didReceiveWidgetSettings', data => {
     if (payload["type"] != null) {
         $("#js_type").val(payload["type"]);
     }
-}
+});
 
 function saveWidgetSettings() {
     // refresh value from GUI
