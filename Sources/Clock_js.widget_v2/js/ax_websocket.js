@@ -87,31 +87,33 @@ AVT_CREATOR_CENTRAL = (function() {
     }
 
     function init() {
-        let inPort, inUUID, inMessageType, inWidgetInfo;
+        let inPort, inUuid, inEvent, inPackageInfo, inWidgetInfo;
         let websocket = null;
         let events = new EventEmitter();
 
-        function connect(port, uuid, inEvent, inInfo, widgetInfo) {
+        function connect(port, uuid, event, info, widgetInfo) {
             inPort = port;
-            inUUID = uuid;
-            inMessageType = inEvent;
+            inUuid = uuid;
+            inEvent = info;
+            inPackageInfo = info;
             inWidgetInfo = widgetInfo;
             
             websocket = new WebSocket(`ws://localhost:${inPort}`);
 
             websocket.onopen = function() {
                 let json = {
-                    event : inMessageType,
-                    uuid: inUUID
+                    event : inEvent,
+                    uuid: inUuid
                 };
                 websocket.sendJSON(json);
                 
-                AVT_CREATOR_CENTRAL.uuid = inUUID;
+                AVT_CREATOR_CENTRAL.uuid = inUuid;
                 AVT_CREATOR_CENTRAL.connection = websocket;
                 
                 events.emit('webSocketConnected', {
                     port: inPort,
-                    uuid: inUUID,
+                    uuid: inUuid,
+                    pkgInfo: inPackageInfo,
                     widget: inWidgetInfo,
                     connection: websocket
                 });
@@ -135,11 +137,8 @@ AVT_CREATOR_CENTRAL = (function() {
 
         return {
             connect: connect,
-            uuid: inUUID,
-            widget: inWidgetInfo,
             on: (event, callback) => events.on(event, callback),
-            emit: (event, callback) => events.emit(event, callback),
-            connection: websocket
+            emit: (event, callback) => events.emit(event, callback)
         };
     }
 
