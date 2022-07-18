@@ -5,7 +5,7 @@
     "UUID": "com.avermedia.widget.js-clock",
     "Icon": "images/clock.svg",
     "URL": "https://www.avermedia.com/gaming/creatorcentral",
-    "Version": "1.0",
+    "Version": "1.0.0.1",
     "Runtime": {
         "mac": {
             "type": "web",

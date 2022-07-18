@@ -94,7 +94,7 @@ AVT_CREATOR_CENTRAL = (function() {
         function connect(port, uuid, event, info, widgetInfo) {
             inPort = port;
             inUuid = uuid;
-            inEvent = info;
+            inEvent = event;
             inPackageInfo = info;
             inWidgetInfo = widgetInfo;
             
